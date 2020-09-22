@@ -4,7 +4,7 @@
     @foreach (range(1,8) as $index)
         <li class="mb-4">
             <div class="flex items-center text-sm">
-                <img src="https://picsum.photos/40" alt="avatar" class="rounded-full mr-2">
+                <img src="https://picsum.photos/seed/picsum/40" alt="avatar" class="rounded-full mr-2">
                 John Doe
             </div>
         </li>        
