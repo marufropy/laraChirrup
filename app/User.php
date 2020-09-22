@@ -39,7 +39,7 @@ class User extends Authenticatable
 
     public function getAvatarAttribute()
     {
-        return "https://picsum.photos/seed/picsum/40";
+        return "https://picsum.photos/seed/picsum/200";
     }
 
     public function timeline()
@@ -69,5 +69,10 @@ class User extends Authenticatable
     public function follows()
     {
         return $this->belongsToMany(User::class, 'follows', 'user_id', 'following_user_id');
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'name';
     }
 }
