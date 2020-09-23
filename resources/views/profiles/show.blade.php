@@ -3,7 +3,7 @@
         <div class="relative">
             <img class="mb-8" src="/images/banner.jpg" alt="" style="border-radius: 20px">
 
-            <img src="{{$user->avatar}}" alt="" class=" rounded-full mr-2 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2" style="left: 50%" width="150">
+            <img src="{{$user->avatar}}" alt="" class="rounded-full h-40 w-40 mr-2 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2" style="left: 50%" width="150">
         </div>
 
         <div class="flex justify-between items-center mb-4">

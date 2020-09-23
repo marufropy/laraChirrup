@@ -23,6 +23,8 @@ Route::middleware('auth')->group(function(){
     Route::post('/profiles/{user}/follow', 'FollowsController@store')->name('profile');
     
     Route::get('/profiles/{user}/edit', 'ProfilesController@edit')->name('profile');
+
+    Route::patch('/profiles/{user}', 'ProfilesController@update')->name('profile');
 });
 
 Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');

@@ -2,7 +2,7 @@
     <div class="mr-2 flex-shrink-0">
         {{-- <img src="https://picsum.photos/seed/picsum/50" alt="avatar" class="rounded-full mr-2"> --}}
         <a href="{{route('profile', $tweet->user)}}">
-            <img src="{{$tweet->user->avatar}}" alt="avatar" class="rounded-full mr-2" width="50" height="50">
+            <img src="{{$tweet->user->avatar}}" alt="avatar" class="rounded-full h-16 w-16 mr-2" width="50" height="50">
         </a>
     </div>
 
