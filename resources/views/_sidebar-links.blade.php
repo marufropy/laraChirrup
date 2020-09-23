@@ -4,7 +4,7 @@
     </li>
 
     <li>
-        <a class="font-bold text-lg mb-4 block" href="/explore">Explore</a>
+        <a class="font-bold text-lg mb-4 block" href="/browse">Browse</a>
     </li>
 
     <li>

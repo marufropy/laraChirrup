@@ -56,7 +56,6 @@
                 name="avatar"
                 id="avatar"
                 {{-- value="{{$user->avatar}}" --}}
-                required
             >
 
             @error('username')
