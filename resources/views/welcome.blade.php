@@ -45,7 +45,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 70px;
             }
 
             .links > a {
@@ -67,6 +67,9 @@
     <body>
         <div class="flex-center position-ref full-height">
             <div class="content">
+                <div>
+                    <img src="/images/logo.jpg" alt="logo">
+                </div>
                 <div class="title m-b-md">
                     Chirrup
                 </div>
