@@ -23,9 +23,9 @@
 
 <body>
     <div id="app">
-        <section class="px-8 py-4 mb-6">
-            <header class="container mx-auto">
-                <h1><img src="/images/chirrup.jpg" alt="chirrup"></h1>
+        <section class="px-8 py-4 mb-2">
+            <header class="container mx-auto flex justify-center">
+                <h1><img src="/images/logo2.jpg" alt="chirrup"></h1>
             </header>
         </section>
 

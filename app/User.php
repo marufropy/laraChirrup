@@ -43,8 +43,16 @@ class User extends Authenticatable
 
     public function getAvatarAttribute($value)
     {
-        $avatarPath = 'storage/'.$value;
-        return asset($avatarPath ? : '/images/default-avatar.jpeg');
+        // $avatarPath = 'storage/'.$value;
+        // return asset($value ? : '/images/default-avatar.jpeg');
+        if(isset($value))
+        {
+            return asset('storage/'.$value);
+        }
+        else
+        {
+            return asset('images/default-avatar.jpeg');
+        }
     }
 
     public function setPasswordAttribute($value)
@@ -63,7 +71,7 @@ class User extends Authenticatable
 
         return Tweet::whereIn('user_id', $ids)
             ->latest()
-            ->get();
+            ->paginate(20);
     }
 
     public function tweets()

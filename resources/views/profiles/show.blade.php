@@ -7,7 +7,7 @@
         </div>
 
         <div class="flex justify-between items-center mb-4">
-            <div>
+            <div style="max-width: 250px">
                 <h2 class="font-bold text-2xl mb-0">
                     {{$user->name}}
                 </h2>
@@ -19,7 +19,7 @@
 
             <div class="flex">
                 @if (auth()->user()->is($user))
-                    <a href="{{$user->path('edit')}}" class="rounded-full border border-grey-500 py-2 px-4 text-black text-xs mr-2">
+                    <a href="{{$user->path('edit')}}" class="bg-purple-500 hover:bg-purple-700 rounded-full border border-grey-500 py-2 px-4 text-white text-xs mr-2">
                         Edit Profile
                     </a>
                 @endif
@@ -28,7 +28,7 @@
                     <form method="POST" action="/profiles/{{$user->username}}/follow">
                         @csrf
 
-                        <button type="submit" class="bg-blue-500 rounded-full shadow py-2 px-4 text-white text-xs">
+                        <button type="submit" class="bg-purple-500 hover:bg-purple-700 rounded-full shadow py-2 px-4 text-white text-xs">
                             {{auth()->user()->following($user) ? 'Unfollow Me' : 'Follow Me'}}
                         </button>
                     </form>
@@ -42,6 +42,6 @@
     </header>
 
     @include('_timeline',[
-        'tweets' => $user->tweets
+        'tweets' => $tweets
     ])
 @endcomponent
