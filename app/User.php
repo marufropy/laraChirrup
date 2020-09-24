@@ -70,6 +70,7 @@ class User extends Authenticatable
         $ids->push($this->id);
 
         return Tweet::whereIn('user_id', $ids)
+            ->withLikes()
             ->latest()
             ->paginate(20);
     }
@@ -121,5 +122,10 @@ class User extends Authenticatable
         $path = route('profile', $this->username);
 
         return $append ? "{$path}/{$append}" : $path;
+    }
+    
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
     }
 }

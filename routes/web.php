@@ -27,6 +27,10 @@ Route::middleware('auth')->group(function(){
     Route::patch('/profiles/{user}', 'ProfilesController@update')->name('profile');
 
     Route::get('/browse', 'BrowseController@index');
+
+    Route::post('/tweets/{tweet}/like', 'TweetLikesController@store');
+
+    Route::delete('/tweets/{tweet}/like', 'TweetLikesController@destroy');
 });
 
 Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');
