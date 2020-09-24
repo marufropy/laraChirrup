@@ -47,7 +47,7 @@
 
         <div class="mb-6">
             <label for="avatar" class="block mb-2 uppercase font-bold text-xs text-grey-700">
-                Avatar
+                Image
             </label>
 
             <input
